@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YouTube Interaction</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+    }
+    .input-group {
+      margin: 10px 0;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin: 5px 0;
+    }
+    #status {
+      color: #666;
+      margin-top: 10px;
+    }
+    #logContainer {
+      max-height: 200px;
+      overflow-y: auto;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      padding: 5px;
+    }
+    .log-entry {
+      margin: 5px 0;
+      padding: 5px;
+      border-bottom: 1px solid #eee;
+      font-size: 12px;
+    }
+    .success {
+      color: green;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="input-group">
+    <label>Channel URL:</label>
+    <input type="text" id="channelUrl" placeholder="Enter YouTube channel URL">
+  </div>
+  <button id="startBtn">Start Processing</button>
+  <button id="stopBtn">Stop</button>
+  <div id="status"></div>
+  <div id="logContainer"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

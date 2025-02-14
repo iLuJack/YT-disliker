@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Channel Interaction",
+    "version": "1.0",
+    "description": "Automatic YouTube interaction",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "tabs"    
+    ],
+    "host_permissions": [
+      "https://*.youtube.com/*"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://*.youtube.com/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'; connect-src 'self' https://*.youtube.com"
+    }
+  }
